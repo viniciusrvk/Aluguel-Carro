@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.TelaPrincipalClass">
+	<children>
+		<BorderPane prefHeight="200.0" prefWidth="664.0">
+			<top>
+				<MenuBar style="-fx-background-color: #B4C5C6;" BorderPane.alignment="CENTER">
+					<menus>
+						<Menu mnemonicParsing="false" text="File">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Close" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Edit">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Delete" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Help">
+							<items>
+								<MenuItem mnemonicParsing="false" text="About" />
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+			</top>
+			<right>
+				<VBox prefHeight="525.0" prefWidth="192.0" BorderPane.alignment="CENTER">
+					<children>
+						<JFXButton fx:id="registrarEmprestimoBtn" contentDisplay="TOP" onAction="#loadRegistrarEmprestimo" prefHeight="180.0" prefWidth="190.0" styleClass="setup-button" stylesheets="@main.css" text="Realizar Empréstimo">
+							<graphic>
+								<ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../images/icons8-add-list-48.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+							<VBox.margin>
+								<Insets bottom="2.0" top="2.0" />
+							</VBox.margin>
+							<font>
+								<Font size="13.0" />
+							</font>
+						</JFXButton>
+						<JFXButton fx:id="encerrarEmprestimoBtn" contentDisplay="TOP" layoutX="10.0" layoutY="241.0" onAction="#loadEncerrarEmprestimo" prefHeight="180.0" prefWidth="190.0" styleClass="setup-button" stylesheets="@main.css" text="Encerrar Empréstimo">
+							<graphic>
+								<ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../images/tick-2f382e.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+							<VBox.margin>
+								<Insets bottom="2.0" />
+							</VBox.margin>
+							<font>
+								<Font size="13.0" />
+							</font>
+						</JFXButton>
+						<JFXButton fx:id="buscarUsuarioBtn" contentDisplay="TOP" onAction="#loadBuscarUsuario" prefHeight="180.0" prefWidth="190.0" styleClass="setup-button" stylesheets="@main.css" text="Buscar Usuário">
+							<graphic>
+								<ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../images/users-2f382e.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+							<VBox.margin>
+								<Insets bottom="2.0" />
+							</VBox.margin>
+							<font>
+								<Font size="13.0" />
+							</font>
+						</JFXButton>
+						<JFXButton fx:id="addUsuarioBtn" contentDisplay="TOP" onAction="#loadCadastrarUsuario" prefHeight="180.0" prefWidth="190.0" styleClass="setup-button" stylesheets="@main.css" text="Cadastrar Usuáro">
+							<graphic>
+								<ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../images/user-plus-f382e.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+							<VBox.margin>
+								<Insets bottom="2.0" />
+							</VBox.margin>
+							<font>
+								<Font size="13.0" />
+							</font>
+						</JFXButton>
+						<JFXButton fx:id="addFerramentaBtn" contentDisplay="TOP" onAction="#loadCadastrarMaterial" prefHeight="180.0" prefWidth="190.0" styleClass="setup-button" stylesheets="@main.css" text="Cadastrar Fantasia">
+							<graphic>
+								<ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../images/hammer-2f382e.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+							<VBox.margin>
+								<Insets bottom="2.0" />
+							</VBox.margin>
+							<font>
+								<Font size="13.0" />
+							</font>
+						</JFXButton>
+					</children>
+				</VBox>
+			</right>
+			<center>
+				<TabPane prefHeight="200.0" prefWidth="625.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+					<tabs>
+						<Tab text="Principal">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+							</content>
+						</Tab>
+						<Tab fx:id="tabUsuarios" text="Usuários">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<BorderPane prefHeight="434.0" prefWidth="604.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+											<bottom>
+												<HBox fx:id="bottomUsuarios" alignment="CENTER" prefHeight="66.0" prefWidth="604.0" BorderPane.alignment="CENTER">
+													<children>
+														<JFXButton fx:id="viewUsuarioBtn" onAction="#openVisualizarUsuario" styleClass="setup-button" stylesheets="@main.css" text="Visualizar Usuário">
+															<HBox.margin>
+																<Insets left="10.0" right="10.0" />
+															</HBox.margin>
+															<padding>
+																<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+															</padding>
+															<font>
+																<Font size="13.0" />
+															</font>
+															<cursor>
+																<Cursor fx:constant="HAND" />
+															</cursor>
+														</JFXButton>
+													</children>
+													<BorderPane.margin>
+														<Insets bottom="10.0" top="5.0" />
+													</BorderPane.margin>
+													<padding>
+														<Insets bottom="20.0" top="10.0" />
+													</padding>
+												</HBox>
+											</bottom>
+                                 <top>
+                                    <HBox fx:id="headerUsuarios" alignment="CENTER" prefHeight="53.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXComboBox fx:id="comboBoxUsuarios" labelFloat="true" onAction="#verifyComboAction" prefHeight="25.0" prefWidth="280.0" promptText="Buscar Por">
+                                             <HBox.margin>
+                                                <Insets left="15.0" right="10.0" />
+                                             </HBox.margin>
+                                          </JFXComboBox>
+                                          <JFXButton fx:id="buscarUsuariosBtn" onAction="#buscarUsuariosAction" prefWidth="100.0" styleClass="setup-button" stylesheets="@main.css" text="Buscar">
+                                             <HBox.margin>
+                                                <Insets left="30.0" right="10.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </JFXButton>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </BorderPane.margin>
+                                    </HBox>
+                                 </top>
+                                 <center>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <BorderPane.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </BorderPane.margin>
+                                       <children>
+                                          <TableView fx:id="tableViewUsuarios" prefHeight="339.0" prefWidth="668.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                              <TableColumn fx:id="usuarioColumnMatricula" prefWidth="127.0" text="Matricula" />
+                                              <TableColumn fx:id="usuarioColumnNome" minWidth="0.0" prefWidth="277.0" text="Nome" />
+                                                <TableColumn fx:id="usuarioColumnEmail" minWidth="0.0" prefWidth="263.0" text="Email" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+										</BorderPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+                  <Tab fx:id="tabEmprestimos" text="Empréstimos">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="434.0" prefWidth="604.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <HBox fx:id="bottomEmprestimo" alignment="CENTER" prefHeight="66.0" prefWidth="604.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXButton fx:id="viewEmprestimoBtn" onAction="#openVisualizarEmprestimo" styleClass="setup-button" stylesheets="@main.css" text="Visualizar Empréstimo">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </JFXButton>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets bottom="10.0" top="5.0" />
+                                       </BorderPane.margin>
+                                       <padding>
+                                          <Insets bottom="20.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </bottom>
+                                 <top>
+                                    <HBox fx:id="headerEmprestimos" alignment="CENTER" prefHeight="53.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXComboBox fx:id="comboBoxEmprestimos" labelFloat="true" onAction="#verifyComboAction" prefHeight="25.0" prefWidth="250.0" promptText="Buscar Por">
+                                             <HBox.margin>
+                                                <Insets left="15.0" right="10.0" />
+                                             </HBox.margin>
+                                          </JFXComboBox>
+                                          <JFXButton fx:id="buscarEmprestimosBtn" onAction="#buscarEmprestimosAction" prefWidth="100.0" styleClass="setup-button" stylesheets="@main.css" text="Buscar">
+                                             <HBox.margin>
+                                                <Insets left="30.0" right="10.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </JFXButton>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </BorderPane.margin>
+                                    </HBox>
+                                 </top>
+                                 <center>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TableView fx:id="tableViewEmprestimos" prefHeight="359.0" prefWidth="688.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                              <TableColumn fx:id="emprestimoColumnID" prefWidth="75.0" text="ID" />
+                                              <TableColumn fx:id="emprestimoColumnDataInicio" prefWidth="75.0" text="Inicio" />
+                                                <TableColumn fx:id="emprestimoColumnStatus" prefWidth="75.0" text="Status" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </BorderPane.margin>
+                                    </AnchorPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tabFerramentas" text="Ferramentas">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="434.0" prefWidth="604.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <HBox fx:id="bottomFerramentas" alignment="CENTER" prefHeight="66.0" prefWidth="604.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXButton fx:id="viewFerramentaBtn" onAction="#openVisualizarFerramenta" styleClass="setup-button" stylesheets="@main.css" text="Visualizar Ferramenta">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </JFXButton>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets bottom="10.0" top="5.0" />
+                                       </BorderPane.margin>
+                                       <padding>
+                                          <Insets bottom="20.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </bottom>
+                                 <center>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TableView fx:id="tableViewFerramentas" prefHeight="367.0" prefWidth="688.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                              <TableColumn fx:id="ferramentaColumnID" prefWidth="92.0" text="ID" />
+                                              <TableColumn fx:id="ferramentaColumnTipo" prefWidth="352.0" text="Tipo" />
+                                                <TableColumn fx:id="ferramentaColumnStatus" prefWidth="75.0" text="Status" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </BorderPane.margin>
+                                    </AnchorPane>
+                                 </center>
+                                 <top>
+                                    <HBox fx:id="headerFerramentas" alignment="CENTER" prefHeight="53.0" prefWidth="688.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXComboBox fx:id="comboBoxFerramentas" labelFloat="true" onAction="#verifyComboAction" prefHeight="25.0" prefWidth="250.0" promptText="Buscar Por">
+                                             <HBox.margin>
+                                                <Insets left="15.0" right="10.0" />
+                                             </HBox.margin>
+                                          </JFXComboBox>
+                                          <JFXButton fx:id="buscarFerramentasBtn" onAction="#buscarFerramentasAction" prefWidth="100.0" styleClass="setup-button" stylesheets="@main.css" text="Buscar">
+                                             <HBox.margin>
+                                                <Insets left="30.0" right="10.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </JFXButton>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </BorderPane.margin>
+                                    </HBox>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+					</tabs>
+					<BorderPane.margin>
+						<Insets right="20.0" />
+					</BorderPane.margin>
+				</TabPane>
+			</center>
+         <bottom>
+            <HBox prefHeight="26.0" prefWidth="900.0" style="-fx-background-color: #B4C5C6;" BorderPane.alignment="CENTER" />
+         </bottom>
+		</BorderPane>
+	</children>
+</StackPane>

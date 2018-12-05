@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="414.0" prefWidth="455.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.TelaCadastrarUsuario">
+   <children>
+      <Pane prefHeight="57.0" prefWidth="455.0" style="-fx-background-color: #56705E;">
+         <children>
+            <Label alignment="CENTER" layoutX="123.0" layoutY="15.0" text="CADASTRO DE USUÁRIO" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="exitLabel" layoutX="425.0" layoutY="11.0" onMouseClicked="#exitAction" text="X" textFill="#070707">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="57.0" prefHeight="357.0" prefWidth="455.0" style="-fx-background-color: #CCC9BF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
+         <children>
+            <JFXComboBox fx:id="tipoComboBox" labelFloat="true" layoutX="143.0" layoutY="26.0" prefHeight="30.0" prefWidth="170.0" promptText="Tipo de Usuário:" styleClass="jfx-combo-box" stylesheets="@ferramenta.css" />
+            <JFXTextField fx:id="matriculaTxt" labelFloat="true" layoutX="14.0" layoutY="97.0" prefHeight="30.0" prefWidth="170.0" promptText="Nº Matrícula">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="cpfTxt" labelFloat="true" layoutX="274.0" layoutY="97.0" prefHeight="30.0" prefWidth="167.0" promptText="CPF" />
+            <JFXTextField fx:id="nomeTxt" labelFloat="true" layoutX="14.0" layoutY="157.0" prefHeight="30.0" prefWidth="429.0" promptText="Nome" />
+            <JFXTextField fx:id="emailTxt" labelFloat="true" layoutX="36.0" layoutY="223.0" prefHeight="30.0" prefWidth="384.0" promptText="E-mail" />
+            <HBox layoutX="6.0" layoutY="290.0" prefHeight="67.0" prefWidth="444.0">
+               <children>
+                  <JFXButton fx:id="saveBtn" onAction="#saveUsuario" prefHeight="60.0" prefWidth="380.0" styleClass="jfx-button" stylesheets="@usuario.css" text="Save">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="cancelBtn" onAction="#cancel" prefHeight="60.0" prefWidth="380.0" styleClass="jfx-button" stylesheets="@usuario.css" text="Cancel">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

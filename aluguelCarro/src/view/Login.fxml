@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="979.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.TelaLogin">
+   <children>
+      <ImageView fitHeight="336.0" fitWidth="507.0" layoutX="42.0" layoutY="58.0" opacity="0.25" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="431.0235290527344" AnchorPane.topAnchor="58.0">
+         <image>
+            <Image url="@../images/geo1.jpg" />
+         </image>
+         <effect>
+            <DropShadow color="#4d4949" />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="592.0" layoutY="53.0" opacity="0.9" prefHeight="336.0" prefWidth="338.0" style="-fx-background-color: A0AF84; -fx-background-radius: 15;" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="592.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="53.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="14.0" text="Sign In" textFill="#393636">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="usernameTxt" labelFloat="true" layoutX="10.0" layoutY="82.0" prefHeight="25.0" prefWidth="267.0" promptText="Nome Usuário/Email" unFocusColor="BLACK" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font size="13.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="passwordField" labelFloat="true" layoutX="10.0" layoutY="128.0" prefHeight="25.0" prefWidth="267.0" promptText="Senha" unFocusColor="BLACK" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="entrarBtn" alignment="CENTER" layoutX="101.0" layoutY="197.0" onAction="#entrar" prefHeight="25.0" prefWidth="250.0" ripplerFill="#e1d6d6" style="-fx-background-color: #e45652;" text="Entrar" textAlignment="CENTER" textFill="#fcf9f9" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="cancelarBtn" alignment="CENTER" layoutX="9.0" layoutY="244.0" onAction="#cancelarAction" prefHeight="25.0" prefWidth="250.0" ripplerFill="#e1d6d6" style="-fx-background-color: #e45652;" text="Cancelar" textAlignment="CENTER" textFill="#fcf9f9" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Hyperlink fx:id="esqueceuLink" layoutX="92.0" layoutY="294.0" onAction="#esqueceuAction" text="Esqueceu a Senha?" textAlignment="CENTER" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Hyperlink>
+         </children>
+      </AnchorPane>
+      <Label layoutX="86.0" layoutY="132.0" text="Bem-vindo ao " textFill="#ddd3d3">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="131.0" text="DGEOtools" textFill="#ddd3d3">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="178.0" text="O Sistema de Gerenciamento de Empréstimo de Ferramentas&#10;do Departamento de Geologia da UFRN." textFill="#a49999" />
+      <Label fx:id="exitLabel" layoutX="947.0" onMouseClicked="#exitLabelAction" text="X" textFill="#eee4e4">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <JFXButton alignment="CENTER" layoutX="86.0" layoutY="236.0" prefHeight="25.0" prefWidth="125.0" ripplerFill="#e1d6d6" style="-fx-background-color: #e45652;" text="Cadastre-se" textFill="#fcf9f9">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

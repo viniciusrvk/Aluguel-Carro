@@ -1,0 +1,18 @@
+
+.jfx-button{
+	-fx-background-color: #75ADA3;
+	-fx-text-fill: white;
+}
+
+.jfx-button:hover{
+	-fx-background-color: #A7F98E;
+}
+
+.jfx-combo-box .list-view .list-cell{
+	-fx-text-fill: #A7F98E;
+}
+
+JFXRadioButton {
+    -jfx-selected-color: #274E51;
+    -jfx-unselected-color: #8E3E3E;
+}

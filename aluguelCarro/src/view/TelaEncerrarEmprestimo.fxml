@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="414.0" prefWidth="455.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.TelaEncerrarEmprestimo">
+   <children>
+      <Pane prefHeight="57.0" prefWidth="455.0" style="-fx-background-color: #56705E;">
+         <children>
+            <Label alignment="CENTER" layoutX="80.0" layoutY="15.0" text="ENCERRAMENTO DE EMPRÉSTIMO" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="exitLabel" layoutX="425.0" layoutY="11.0" onMouseClicked="#exitAction" text="X" textFill="#070707">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="57.0" prefHeight="357.0" prefWidth="455.0" style="-fx-background-color: #CCC9BF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
+         <children>
+            <JFXTextField fx:id="idMaterialTxt" labelFloat="true" layoutX="135.0" layoutY="74.0" prefHeight="30.0" prefWidth="185.0" promptText="ID Material">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="matriculaTxt" labelFloat="true" layoutX="135.0" layoutY="149.0" prefHeight="30.0" prefWidth="185.0" promptText="Matrícula do Usuário">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <HBox layoutX="6.0" layoutY="290.0" prefHeight="67.0" prefWidth="444.0">
+               <children>
+                  <JFXButton fx:id="devolverBtn" onAction="#devolverMaterialAction" prefHeight="60.0" prefWidth="380.0" styleClass="jfx-button" stylesheets="@usuario.css" text="Devolver Material">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="cancelBtn" onAction="#cancel" prefHeight="60.0" prefWidth="380.0" styleClass="jfx-button" stylesheets="@usuario.css" text="Cancel">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
