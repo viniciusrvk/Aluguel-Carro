@@ -79,8 +79,6 @@ public class TelaCadastrarUsuario  implements Initializable {
 		this.closeWindow();
     }
 	
-
-
     @FXML
     void cancel(ActionEvent event) {    	
     	closeWindow();

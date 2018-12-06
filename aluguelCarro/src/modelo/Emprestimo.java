@@ -14,6 +14,7 @@ import javax.persistence.OneToOne;
 
 @MappedSuperclass
 public abstract class Emprestimo {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;

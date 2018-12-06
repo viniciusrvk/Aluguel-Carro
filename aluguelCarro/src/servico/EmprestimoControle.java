@@ -18,7 +18,7 @@ import modelo.Usuario;
 public class EmprestimoControle {
 	
 	private boolean pode_fazer_emprestimo(Usuario usuario) {
-		if(usuario.get_tipo() == "Aluno") {
+		if(usuario.get_tipo() == "Cliente") {
 			UsuarioDAO usuarioDAO = new UsuarioDAO();
 			return (usuarioDAO.buscar_matricula(usuario.get_matricula()).size() == 0);
 		}

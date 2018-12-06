@@ -18,9 +18,8 @@ import modelo.Usuario;
 public class Email {
 	private String from = "dgeosigufrn@gmail.com";
 	private String subject = "@acao de material.";
-	private String message = "<h1>DGEOsig</h1>"
-			+ "<h2>ConfirmaÃ§Ã£o de @acao do material: <strong>@tagMaterial</strong>.</h2>"
-			+ "<h3>15 dias para a devoluÃ§Ã£o</3>";
+	private String message = "<h1>RentaCar</h1>"
+			+ "<h2>Conifrmação da realização do aluguel do veículo: <strong>@tagMaterial</strong>.</h2>";
 	private String to;
 	
 	public void setSubject(String subject) {
